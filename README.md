@@ -1,4 +1,3 @@
 # python-spark
-Hi
-this is a sample python Spark proj
-# python-spark
+Python Spark Project
+
