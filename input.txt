@@ -1,5 +1,4 @@
-hi this is
-this is
-man
-uncle
-
+Hi 
+This is my simple java project
+java is installed
+java 1.8 verson is present
