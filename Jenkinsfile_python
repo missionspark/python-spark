@@ -14,8 +14,6 @@ sh "cd /opt/spark;./bin/spark-submit $WORKSPACE/wordcount.py"
 stage('Result') {
 sh  " cat /tmp/output/* "
 }
-
-emailext ( body: 'Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'', mimeType: 'text/html', subject: 'SUCCESS: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'', to: 'kpssalugu@gmail.com')
 //snsPublish(topicArn:'arn:aws:sns:us-east-1:433131629901:jenkins-notify', subject:'Success: (<${env.BUILD_URL}|Build>) `${JOB_NAME}:${env.BUILD_NUMBER}`', message:'Hi, (<${env.BUILD_URL}|Build>) `${JOB_NAME}:${env.BUILD_NUMBER}` is successfull')
 } catch (e) {
       currentBuild.result = "FAILED"
